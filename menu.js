@@ -1,4 +1,5 @@
 const prompt = require('prompt-sync')();
+const { viewStats } = require('./gameData');
 
 const showMenu = () => {
   let isRunning = true;
@@ -14,7 +15,7 @@ const showMenu = () => {
     if (choice === '1') {
       console.log('You chose: Play Round');
     } else if (choice === '2') {
-      console.log('You chose: View Stats');
+      viewStats();
     } else if (choice === '3') {
       console.log('Goodbye!');
       isRunning = false;
